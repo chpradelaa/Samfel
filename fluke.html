@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar Seri Produk FLUKE - Samfel Global Mandiri</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #111827;
+    }
+    .framer-animate {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .framer-animate.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(80px);
+      -webkit-backdrop-filter: blur(80px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+    }
+    .sub-prod-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .sub-prod-card:hover img {
+      transform: scale(1.05);
+    }
+    
+    /* ── ANIMASI TAMBAHAN SAAT KARTU DI-HOVER ── */
+    .sub-prod-card:hover .btn-lihat-produk {
+      background-color: #038BBB;
+      color: white;
+      border-color: #038BBB;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 15px -3px rgba(3, 139, 187, 0.3), 0 4px 6px -4px rgba(3, 139, 187, 0.3);
+    }
+
+    /* ── ANIMASI POP-UP KREATIF (FADE & SLIDE) ── */
+    #inline-category-list {
+      transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+  </style>
+</head>
+<body class="bg-[#FAFAFC] antialiased">
+
+  <nav id="navbar" class="fixed w-full z-50 py-4 glass-nav">
+    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center relative">
+      <a href="index.html#home" class="flex items-center gap-2 font-bold text-xl tracking-tight hover:opacity-80 transition cursor-pointer">
+        <img src="logo.png" alt="Logo" class="w-8 h-8 object-contain">
+        <span>Samfel Global Mandiri</span>
+      </a>
+      <div class="hidden md:flex space-x-8 text-base font-medium text-[#000000]">
+        <a href="index.html#product" class="hover:text-yellow-500 transition">PRODUCT</a>
+        <a href="index.html#service" class="hover:text-yellow-500 transition">SERVICE</a>
+        <a href="index.html#gallery" class="hover:text-yellow-500 transition">GALLERY</a>
+        <a href="index.html#rental"  class="hover:text-yellow-500 transition">RENTAL</a>
+      </div>
+      
+      <div class="w-28 hidden md:block"></div> </div>
+  </nav>
+
+  <main class="pt-32 pb-24 px-6">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="mb-12 framer-animate show">
+        <div class="mb-4 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs font-semibold tracking-widest text-gray-400 uppercase select-none relative z-40">
+          <a href="index.html#product" class="group inline-flex items-center gap-2 transition duration-300">
+            <span class="text-sm font-normal text-[#038BBB] transition-transform duration-300 group-hover:-translate-x-1">←</span>
+            <span class="group-hover:text-[#038BBB] transition-colors duration-300">Katalog Produk</span>
+          </a>
+          <span class="text-gray-300">/</span>
+          
+          <div class="inline-flex items-center gap-3">
+            <button id="breadcrumb-trigger" class="text-[#038BBB] font-bold normal-case flex items-center gap-1 transition-colors duration-200 focus:outline-none cursor-pointer">
+              <span>Fluke Series</span>
+              <svg id="trigger-chevron" class="w-3 h-3 transform transition-transform duration-300 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg>
+            </button>
+
+            <div id="inline-category-list" class="hidden opacity-0 -translate-x-4 flex items-center gap-x-2 text-gray-400 font-medium normal-case bg-white py-1 px-3 border border-gray-100 rounded-full shadow-sm">
+              <a href="hikmicro.html" class="hover:text-[#FFE13D] transition-colors duration-200">Hikmicro Series</a>
+              <span class="text-gray-200">•</span>
+              <a href="megger.html" class="hover:text-[#FFE13D] transition-colors duration-200">Megger Series</a>
+              <span class="text-gray-200">•</span>
+              <a href="distribution.html" class="hover:text-[#FFE13D] transition-colors duration-200">Power Distribution</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col lg:flex-row lg:items-baseline gap-4 lg:gap-6 mb-4">
+          <h1 class="text-4xl font-bold tracking-tight">FLUKE Series</h1>
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs font-semibold tracking-wider text-gray-400 uppercase">
+            <a href="#fluke-thermal-cameras" class="hover:text-[#038BBB] transition-colors duration-200">Thermal Cameras</a>
+            <span class="text-gray-200">•</span>
+            <a href="#fluke-leak-detector" class="hover:text-[#038BBB] transition-colors duration-200">Leak & Gas Detector</a>
+          </div>
+        </div>
+        
+        <div class="w-20 h-1 bg-[#FFE13D] rounded-full"></div>
+      </div>
+
+      <section id="fluke-thermal-cameras" class="mb-16 framer-animate show scroll-mt-32">
+        <div class="flex items-center gap-4 mb-8">
+          <h2 class="text-2xl font-bold tracking-tight text-gray-800">THERMAL CAMERAS</h2>
+          <div class="flex-1 h-px bg-gray-200"></div>
+          <span class="text-xs font-semibold text-gray-400 uppercase tracking-widest">8 Produk Terdaftar</span>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="sub-prod-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden transition hover:shadow-md flex flex-col justify-between">
+            <div>
+              <div class="h-44 overflow-hidden relative bg-gray-100">
+                <img src="https://picsum.photos/seed/ti401pro/400/300" alt="Fluke Ti401 Pro Thermal Camera">
+                <span class="absolute top-3 left-3 text-xs font-bold px-3 py-1 rounded-full bg-[#FFE13D] text-black">Professional</span>
+              </div>
+              <div class="p-5">
+                <h3 class="font-bold text-base mb-2 leading-snug">Fluke Ti401 Pro Thermal Camera</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Kamera industri berspesifikasi tinggi dengan resolusi gambar sangat tajam bagi profesional pemeliharaan.</p>
+              </div>
+            </div>
+            <div class="px-5 pb-5">
+              <a href="#" target="_blank" class="btn-lihat-produk w-full inline-flex justify-center items-center bg-[#FAFAFC] border border-gray-200 text-gray-800 text-sm font-semibold py-2.5 rounded-xl transition-all duration-300">Lihat Produk</a>
+            </div>
+          </div>
+
+          <div class="sub-prod-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden transition hover:shadow-md flex flex-col justify-between">
+            <div>
+              <div class="h-44 overflow-hidden relative bg-gray-100">
+                <img src="https://picsum.photos/seed/tis60plus/400/300" alt="Fluke TiS60+ Thermal Camera">
+                <span class="absolute top-3 left-3 text-xs font-bold px-3 py-1 rounded-full bg-[#FFE13D] text-black">Fixed Focus</span>
+              </div>
+              <div class="p-5">
+                <h3 class="font-bold text-base mb-2 leading-snug">Fluke TiS60+ Thermal Camera</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Kamera fokus tetap yang menangkap detail gambar inframerah berkualitas tinggi secara instan.</p>
+              </div>
+            </div>
+            <div class="px-5 pb-5">
+              <a href="#" target="_blank" class="btn-lihat-produk w-full inline-flex justify-center items-center bg-[#FAFAFC] border border-gray-200 text-gray-800 text-sm font-semibold py-2.5 rounded-xl transition-all duration-300">Lihat Produk</a>
+            </div>
+          </div>
+
+          <div class="sub-prod-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden transition hover:shadow-md flex flex-col justify-between">
+            <div>
+              <div class="h-44 overflow-hidden relative bg-gray-100">
+                <img src="https://picsum.photos/seed/tis20plus/400/300" alt="Fluke TiS20+ Thermal Imaging Camera">
+                <span class="absolute top-3 left-3 text-xs font-bold px-3 py-1 rounded-full bg-[#FFE13D] text-black">Entry Level</span>
+              </div>
+              <div class="p-5">
+                <h3 class="font-bold text-base mb-2 leading-snug">Fluke TiS20+ Thermal Imaging Camera</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Sistem pencitraan entry-level yang andal dan mudah digunakan untuk efisiensi teknisi kelistrikan.</p>
+              </div>
+            </div>
+            <div class="px-5 pb-5">
+              <a href="#" target="_blank" class="btn-lihat-produk w-full inline-flex justify-center items-center bg-[#FAFAFC] border border-gray-200 text-gray-800 text-sm font-semibold py-2.5 rounded-xl transition-all duration-300">Lihat Produk</a>
+            </div>
+          </div>
+
+          <div class="sub-prod-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden transition hover:shadow-md flex flex-col justify-between">
+            <div>
+              <div class="h-44 overflow-hidden relative bg-gray-100">
+                <img src="https://picsum.photos/seed/ti300plus/400/300" alt="Fluke Ti300+ Thermal Camera">
+                <span class="absolute top-3 left-3 text-xs font-bold px-3 py-1 rounded-full bg-[#FFE13D] text-black">LaserSharp™</span>
+              </div>
+              <div class="p-5">
+                <h3 class="font-bold text-base mb-2 leading-snug">Fluke Ti300+ Thermal Camera</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Kamera termal dengan sistem fokus laser otomatis untuk memastikan gambar selalu tajam.</p>
+              </div>
+            </div>
+            <div class="px-5 pb-5">
+              <a href="#" target="_blank" class="btn-lihat-produk w-full inline-flex justify-center items-center bg-[#FAFAFC] border border-gray-200 text-gray-800 text-sm font-semibold py-2.5 rounded-xl transition-all duration-300">Lihat Produk</a>
+            </div>
+          </div>
+
+          <div class="sub-prod-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden transition hover:shadow-md flex flex-col justify-between">
+            <div>
+              <div class="h-44 overflow-hidden relative bg-gray-100">
+                <img src="https://picsum.photos/seed/tix501/400/300" alt="Fluke TiX501 Thermal Camera Compact">
+                <span class="absolute top-3 left-3 text-xs font-bold px-3 py-1 rounded-full bg-[#FFE13D] text-black">Articulating</span>
+              </div>
+              <div class="p-5">
+                <h3 class="font-bold text-base mb-2 leading-snug">Fluke TiX501 Thermal Camera Compact</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Desain bodi fleksibel yang dapat diputar, mempermudah pengambilan gambar pada sudut tersulit.</p>
+              </div>
+            </div>
+            <div class="px-5 pb-5">
+              <a href="#" target="_blank" class="btn-lihat-produk w-full inline-flex justify-center items-center bg-[#FAFAFC] border border-gray-200 text-gray-800 text-sm font-semibold py-2.5 rounded-xl transition-all duration-300">Lihat Produk</a>
+            </div>
+          </div>
+
+          <div class="sub-prod-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden transition hover:shadow-md flex flex-col justify-between">
+            <div>
+              <div class="h-44 overflow-hidden relative bg-gray-100">
+                <img src="https://picsum.photos/seed/pti120/400/300" alt="Fluke PTi120 Pocket Thermal Camera">
+                <span class="absolute top-3 left-3 text-xs font-bold px-3 py-1 rounded-full bg-[#FFE13D] text-black">Pocket Size</span>
+              </div>
+              <div class="p-5">
+                <h3 class="font-bold text-base mb-2 leading-snug">Fluke PTi120 Pocket Thermal Camera</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Kamera termal seukuran saku yang ringkas, kokoh, dan dilengkapi pemindaian aset otomatis.</p>
+              </div>
+            </div>
+            <div class="px-5 pb-5">
+              <a href="#" target="_blank" class="btn-lihat-produk w-full inline-flex justify-center items-center bg-[#FAFAFC] border border-gray-200 text-gray-800 text-sm font-semibold py-2.5 rounded-xl transition-all duration-300">Lihat Produk</a>
+            </div>
+          </div>
+
+          <div class="sub-prod-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden transition hover:shadow-md flex flex-col justify-between">
+            <div>
+              <div class="h-44 overflow-hidden relative bg-gray-100">
+                <img src="https://picsum.photos/seed/rse300/400/300" alt="Fluke RSE300 Mounted Infrared Camera">
+                <span class="absolute top-3 left-3 text-xs font-bold px-3 py-1 rounded-full bg-[#FFE13D] text-black">Stationary 300</span>
+              </div>
+              <div class="p-5">
+                <h3 class="font-bold text-base mb-2 leading-snug">Fluke RSE300 Mounted Infrared Camera</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Kamera inframerah stasioner untuk pemantauan kontinu 24/7 dan integrasi sistem otomatisasi.</p>
+              </div>
+            </div>
+            <div class="px-5 pb-5">
+              <a href="#" target="_blank" class="btn-lihat-produk w-full inline-flex justify-center items-center bg-[#FAFAFC] border border-gray-200 text-gray-800 text-sm font-semibold py-2.5 rounded-xl transition-all duration-300">Lihat Produk</a>
+            </div>
+          </div>
+
+          <div class="sub-prod-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden transition hover:shadow-md flex flex-col justify-between">
+            <div>
+              <div class="h-44 overflow-hidden relative bg-gray-100">
+                <img src="https://picsum.photos/seed/rse600/400/300" alt="Fluke RSE600 Mounted Infrared Camera">
+                <span class="absolute top-3 left-3 text-xs font-bold px-3 py-1 rounded-full bg-[#FFE13D] text-black">Stationary 600</span>
+              </div>
+              <div class="p-5">
+                <h3 class="font-bold text-base mb-2 leading-snug">Fluke RSE600 Mounted Infrared Camera</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Pencitraan termal terpasang tetap resolusi tinggi untuk kebutuhan analisis data riset (R&D) mendalam.</p>
+              </div>
+            </div>
+            <div class="px-5 pb-5">
+              <a href="#" target="_blank" class="btn-lihat-produk w-full inline-flex justify-center items-center bg-[#FAFAFC] border border-gray-200 text-gray-800 text-sm font-semibold py-2.5 rounded-xl transition-all duration-300">Lihat Produk</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="fluke-leak-detector" class="mb-16 framer-animate show scroll-mt-32">
+        <div class="flex items-center gap-4 mb-8">
+          <h2 class="text-2xl font-bold tracking-tight text-gray-800">LEAK DETECTOR</h2>
+          <div class="flex-1 h-px bg-gray-200"></div>
+          <span class="text-xs font-semibold text-gray-400 uppercase tracking-widest">2 Produk Terdaftar</span>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="sub-prod-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden transition hover:shadow-md flex flex-col justify-between">
+            <div>
+              <div class="h-44 overflow-hidden relative bg-gray-100">
+                <img src="https://picsum.photos/seed/ti450sf6/400/300" alt="Fluke Ti450 SF6 Gas Detector">
+                <span class="absolute top-3 left-3 text-xs font-bold px-3 py-1 rounded-full bg-[#FFE13D] text-black">SF6 Gas</span>
+              </div>
+              <div class="p-5">
+                <h3 class="font-bold text-base mb-2 leading-snug">Fluke Ti450 SF6 Gas Detector</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Mendeteksi kebocoran gas isolasi SF6 secara visual pada gardu induk tanpa menghentikan jalannya operasional.</p>
+              </div>
+            </div>
+            <div class="px-5 pb-5">
+              <a href="#" target="_blank" class="btn-lihat-produk w-full inline-flex justify-center items-center bg-[#FAFAFC] border border-gray-200 text-gray-800 text-sm font-semibold py-2.5 rounded-xl transition-all duration-300">Lihat Produk</a>
+            </div>
+          </div>
+
+          <div class="sub-prod-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden transition hover:shadow-md flex flex-col justify-between">
+            <div>
+              <div class="h-44 overflow-hidden relative bg-gray-100">
+                <img src="https://picsum.photos/seed/ii900/400/300" alt="Fluke ii900 Sonic Industrial Imager">
+                <span class="absolute top-3 left-3 text-xs font-bold px-3 py-1 rounded-full bg-[#FFE13D] text-black">Acoustic</span>
+              </div>
+              <div class="p-5">
+                <h3 class="font-bold text-base mb-2 leading-snug">Fluke ii900 Sonic Industrial Imager</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Kamera akustik dengan susunan mikrofon sensitif untuk melokalisasi titik kebocoran udara bertekanan di area bising.</p>
+              </div>
+            </div>
+            <div class="px-5 pb-5">
+              <a href="#" target="_blank" class="btn-lihat-produk w-full inline-flex justify-center items-center bg-[#FAFAFC] border border-gray-200 text-gray-800 text-sm font-semibold py-2.5 rounded-xl transition-all duration-300">Lihat Produk</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <div id="wa-floating-container" class="fixed bottom-6 right-6 z-[9999] flex items-center gap-3 pointer-events-none transition-all duration-300">
+    <div class="bg-[#F4F6F9] text-gray-800 text-[12px] font-normal px-3 py-1.5 rounded-lg shadow-[0_4px_12px_rgba(0,0,0,0.1)] border border-gray-200/50 hidden md:flex items-center gap-1 pointer-events-auto transition-all duration-300 animate-bounce h-fit">
+      <span>Need Help?</span>
+      <span class="font-semibold text-[#111827]">Chat with us</span>
+    </div>
+    
+    <a href="https://wa.me/081275685729" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-14 h-14 bg-[#25D366] rounded-full shadow-[0_4px_16px_rgba(37,211,102,0.3)] hover:bg-[#20ba5a] hover:scale-110 active:scale-95 transition-all duration-300 pointer-events-auto shrink-0" aria-label="Hubungi kami melalui WhatsApp">
+      <svg class="w-8 h-8 text-white fill-current" viewBox="0 0 448 512">
+        <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+      </svg>
+    </a>
+  </div>
+
+  <button id="btn-to-top" class="fixed bottom-6 right-6 z-50 bg-[#038BBB] hover:bg-[#045898] text-white p-3 rounded-full shadow-lg border border-white/20 transition-all duration-300 opacity-0 translate-y-10 pointer-events-none focus:outline-none" aria-label="Scroll ke atas">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+    </svg>
+  </button>
+
+  <script>
+    /* ── LOGIKA ANIMASI POP-UP HORIZONTAL BREADCRUMB ── */
+    const triggerBtn = document.getElementById('breadcrumb-trigger');
+    const inlineList = document.getElementById('inline-category-list');
+    const chevronSvg = document.getElementById('trigger-chevron');
+    let isMenuOpen = false;
+
+    function openInlineMenu() {
+      isMenuOpen = true;
+      inlineList.classList.remove('hidden');
+      setTimeout(() => {
+        inlineList.classList.remove('opacity-0', '-translate-x-4');
+        inlineList.classList.add('opacity-100', 'translate-x-0');
+        chevronSvg.classList.add('rotate-90', 'text-[#038BBB]');
+      }, 10);
+    }
+
+    function closeInlineMenu() {
+      if (!isMenuOpen) return;
+      isMenuOpen = false;
+      inlineList.classList.remove('opacity-100', 'translate-x-0');
+      inlineList.classList.add('opacity-0', '-translate-x-4');
+      chevronSvg.classList.remove('rotate-90', 'text-[#038BBB]');
+      setTimeout(() => {
+        if (!isMenuOpen) inlineList.classList.add('hidden');
+      }, 350);
+    }
+
+    triggerBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (isMenuOpen) {
+        closeInlineMenu();
+      } else {
+        openInlineMenu();
+      }
+    });
+
+    window.addEventListener('scroll', () => {
+      if (isMenuOpen) closeInlineMenu();
+    });
+
+    document.addEventListener('click', () => closeInlineMenu());
+    inlineList.addEventListener('click', (e) => e.stopPropagation());
+
+    /* ── ANIMASI INTERSECTION OBSERVER ── */
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.framer-animate').forEach(el => observer.observe(el));
+
+    /* ── KODE UTAMA: DETEKSI HASH URL & AUTOMATIC SMOOTH SCROLL ── */
+    window.addEventListener('DOMContentLoaded', () => {
+      if (window.location.hash) {
+        setTimeout(() => {
+          const targetId = window.location.hash;
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 150);
+      }
+    });
+
+    /* ── INTERNAL NAV LINK SMOOTH SCROLL ── */
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        if(this.getAttribute('href') === '#') return;
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+          history.pushState(null, null, targetId);
+        }
+      });
+    });
+
+    /* ── LOGIKA DINAMIS POSISI TOMBOL WA & TOMBOL BACK-TO-TOP ── */
+    const btnToTop = document.getElementById('btn-to-top');
+    const waContainer = document.getElementById('wa-floating-container');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        btnToTop.classList.remove('opacity-0', 'translate-y-10', 'pointer-events-none');
+        btnToTop.classList.add('opacity-100', 'translate-y-0', 'pointer-events-auto');
+        
+        waContainer.classList.remove('bottom-6');
+        waContainer.classList.add('bottom-24');
+      } else {
+        btnToTop.classList.remove('opacity-100', 'translate-y-0', 'pointer-events-auto');
+        btnToTop.classList.add('opacity-0', 'translate-y-10', 'pointer-events-none');
+        
+        waContainer.classList.remove('bottom-24');
+        waContainer.classList.add('bottom-6');
+      }
+    });
+
+    btnToTop.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+</body>
+</html>
